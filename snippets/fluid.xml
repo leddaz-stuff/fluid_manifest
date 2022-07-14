@@ -15,7 +15,11 @@
 
   <remote  name="leddaz-stuff"
            fetch="https://github.com/leddaz-stuff/"
-           revision="fluid-12.1" /> 
+           revision="fluid-12.1" />
+
+  <remote  name="gitlab"
+           fetch="https://gitlab.com/LeddaZ/"
+           revision="fluid-12.1" />
 
   <!-- Rootdir -->
   <project path="bionic" name="bionic" groups="pdk" remote="fluid" />
@@ -77,7 +81,7 @@
   <!-- Vendor -->
   <project path="vendor/fextras" name="vendor_fextras" remote="fluid" />
   <project path="vendor/fluid" name="vendor_fluid" remote="fluid" />
-  <project path="vendor/gapps" name="vendor_gapps" remote="fluid-gitlab" clone-depth="1" />
-  <project path="vendor/lawnicons" name="vendor_lawnicons" remote="fluid" />
+  <project path="vendor/gapps" name="vendor_gapps" remote="gitlab" clone-depth="1" />
+  <project path="vendor/lawnicons" name="vendor_lawnicons" remote="leddaz-stuff" />
 
 </manifest>
