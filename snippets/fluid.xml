@@ -13,9 +13,13 @@
            fetch="https://github.com/Project-Fluid-Devices/"
            revision="fluid-12.1" />
 
+  <remote  name="leddaz-stuff"
+           fetch="https://github.com/leddaz-stuff/"
+           revision="fluid-12.1" /> 
+
   <!-- Rootdir -->
   <project path="bionic" name="bionic" groups="pdk" remote="fluid" />
-  <project path="manifest" name="manifest" remote="fluid" />
+  <project path="manifest" name="manifest" remote="leddaz-stuff" />
 
   <!-- Bootable -->
   <project path="bootable/recovery" name="bootable_recovery" groups="pdk" remote="fluid" />
@@ -30,7 +34,7 @@
     <linkfile src="target" dest="build/target" />
     <linkfile src="tools" dest="build/tools" />
   </project>
-  <project path="build/soong" name="build_soong" groups="pdk,tradefed" remote="fluid" >
+  <project path="build/soong" name="build_soong" groups="pdk,tradefed" remote="leddaz-stuff" >
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
@@ -47,7 +51,7 @@
 
   <!-- Frameworks -->
   <project path="frameworks/av" name="frameworks_av" groups="pdk" remote="fluid" />
-  <project path="frameworks/base" name="frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="fluid" />
+  <project path="frameworks/base" name="frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="leddaz-stuff" />
   <project path="frameworks/libs/systemui" name="frameworks_libs_systemui" groups="pdk-cw-fs,pdk-fs" remote="fluid" />
   <project path="frameworks/native" name="frameworks_native" groups="pdk-cw-fs,pdk-fs" remote="fluid" />
   <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" groups="pdk" remote="fluid" />
